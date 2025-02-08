@@ -1,76 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/main.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rugved's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Header Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Rugved's Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blogs">Blogs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Rugved Joshi's Portfolio</h1>
-    <p>Welcome to my personal website!</p>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-blue-500 text-white p-4">
+    <nav class="container mx-auto flex flex-wrap justify-between items-center">
+      <h1 class="text-xl">Rugved's Portfolio</h1>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#projects" class="hover:underline">Projects</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="#blogs" class="hover:underline">Blogs</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="container mt-5">
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Rugved Joshi, a coder, musician, and AI enthusiast currently pursuing a degree in AI and Data Science at PVG COET, Pune.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="py-10 bg-green-200">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
+      <!-- Photo -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <img src="/Images/IMG-20241116-WA0160.jpg" alt="Rugved Joshi" class="w-96 h-auto mx-auto md:mx-0 shadow-lg">
+      </div>
+  
+      <!-- Text -->
+      <div class="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
+        <h2 class="text-3xl font-bold">About Me</h2>
+        <p class="mt-2">
+          Hello! I'm Rugved Joshi, a coder and AI enthusiast currently pursuing a degree in AI and Data Science at PVG COET, Pune.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section class="mt-4">
-      <h2>Skills</h2>
-      <ul class="list-group">
-        <li class="list-group-item">Programming: Python, JavaScript, Flutter</li>
-        <li class="list-group-item">AI/ML Model Development</li>
-        <li class="list-group-item">Music Production and Sound Engineering</li>
-      </ul>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-10 bg-green-100 text-center">
+    <h2 class="text-2xl font-semibold">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 px-5">
+      <div class="bg-white p-4 shadow-md rounded-md">Programming: Python, JavaScript, Flutter</div>
+      <div class="bg-white p-4 shadow-md rounded-md">AI/ML Model Development</div>
+      <div class="bg-white p-4 shadow-md rounded-md">Music Production and Sound Engineering</div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="mt-4">
-      <h2>Contact</h2>
-      <p>Email: rugved.joshi@example.com</p>
-      <p>Phone: +91-9876543210</p>
-      <p>Location: Pune, Maharashtra, India</p>
-    </section>
-  </div>
-
-  <footer class="bg-dark text-white text-center py-4 mt-5">
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
     <p>&copy; 2025 Rugved Joshi. All rights reserved.</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
