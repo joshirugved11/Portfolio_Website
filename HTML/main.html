@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rugved's Portfolio</title>
-    <link href="/CSS/main.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rugved's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-blue-500 text-white p-4">
+    <nav class="container mx-auto flex flex-wrap justify-between items-center">
+      <h1 class="text-xl">Rugved's Portfolio</h1>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#projects" class="hover:underline">Projects</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="#blogs" class="hover:underline">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header class="bg-blue-500 text-white p-4">
-        <nav class="flex justify-between items-center container mx-auto">
-            <h1 class="text-xl">Rugved's Portfolio</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="hover:underline">Home</a></li>
-                <li><a href="#projects" class="hover:underline">Projects</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
-                <li><a href="#blogs" class="hover:underline">Blogs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-10 text-center bg-green-200">
+  <!-- About Section -->
+  <section id="about" class="py-10 bg-green-200">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
+      <!-- Photo -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <img src="/Images/IMG-20241116-WA0160.jpg" alt="Rugved Joshi" class="w-96 h-auto mx-auto md:mx-0 shadow-lg">
+      </div>
+  
+      <!-- Text -->
+      <div class="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
         <h2 class="text-3xl font-bold">About Me</h2>
-        <p class="mt-2">Hello! I'm Rugved Joshi, a coder and AI enthusiast currently pursuing a degree in AI and Data Science at PVG COET, Pune.</p>
-    </section>
+        <p class="mt-2">
+          Hello! I'm Rugved Joshi, a coder and AI enthusiast currently pursuing a degree in AI and Data Science at PVG COET, Pune.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-10 bg-green-100 text-center">
-        <h2 class="text-2xl font-semibold">Skills</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 px-5">
-            <div class="bg-white p-4 shadow-md rounded-md">Programming: Python, JavaScript, Flutter</div>
-            <div class="bg-white p-4 shadow-md rounded-md">AI/ML Model Development</div>
-            <div class="bg-white p-4 shadow-md rounded-md">Music Production and Sound Engineering</div>
-        </div>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-10 bg-green-100 text-center">
+    <h2 class="text-2xl font-semibold">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 px-5">
+      <div class="bg-white p-4 shadow-md rounded-md">Programming: Python, JavaScript, Flutter</div>
+      <div class="bg-white p-4 shadow-md rounded-md">AI/ML Model Development</div>
+      <div class="bg-white p-4 shadow-md rounded-md">Music Production and Sound Engineering</div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Rugved Joshi. All rights reserved.</p>
-    </footer>
-
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 Rugved Joshi. All rights reserved.</p>
+  </footer>
 </body>
 </html>
