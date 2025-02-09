@@ -9,13 +9,13 @@
   body {
     height: 100%;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #b2dfdb, #00ff00); /* Entire background green-themed */
+    background-color: rgb(167, 243, 208); /* Entire background green-themed */
     color: #333;
   }
   
   /* Header */
   .header {
-    background-color: #333;
+    background-color: #3b82f6;
     padding: 1rem;
     text-align: right;
     color: white;
@@ -67,71 +67,77 @@
   
   /* Project Section */
   .projects-section {
-    padding: 2rem;
-    background: transparent; /* Keep project section background transparent */
-    min-height: calc(100vh - 100px);
+    padding: 20px;
+    background: linear-gradient(to bottom, #e0f7fa, #80cbc4);
   }
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
   }
   
   .project-card {
-    background-color: #444;
-    color: white;
-    padding: 1rem;
+    background-color: white;
     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s;
   }
   
   .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
   }
   
-  .github-card {
-    background-color: #6a5acd;
+  .project-image img {
+    width: 100%;
+    height: auto;
   }
   
-  .spotify-card {
-    background-color: #1db954;
+  .project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
   }
   
-  .project-card a {
+  .github-logo img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .project-button {
+    background-color: #4caf50;
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
   }
   
-  .project-card h2 {
-    font-size: 20px;
-    margin-bottom: 0.5rem;
+  .project-button:hover {
+    background-color: #388e3c;
   }
   
-  /* Media Queries */
-  @media (max-width: 768px) {
+  /* Responsive Design */
+  @media (max-width: 600px) {
     .header-content {
       flex-direction: column;
       text-align: center;
     }
   
     .nav ul {
-      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .project-info {
+      flex-direction: column;
+      gap: 10px;
     }
   }
-  
-  @media (max-width: 480px) {
-    .project-card {
-      padding: 0.8rem;
-    }
-  
-    .project-card h2 {
-      font-size: 18px;
-    }
-  
-    .nav a {
-      font-size: 16px;
-    }
-  }
-  
