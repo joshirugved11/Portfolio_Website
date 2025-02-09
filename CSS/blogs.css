@@ -5,12 +5,16 @@
     font-family: 'Arial', sans-serif;
   }
   
+  html,
   body {
-    background-color: #f3f3f3;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(167, 243, 208); /* Entire background green-themed */
+    color: #333; /* Entire background green-themed */
   }
   
   header {
-    background-color: #333;
+    background-color: #3b82f6;
     padding: 20px;
     text-align: center;
     color: white;
