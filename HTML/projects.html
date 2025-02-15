@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/projects.css">
-  <title>Projects Section</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/CSS/projects.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="header">
-  <div class="header-content">
-    <a href="/HTML/main.html" class="home-button">Go to Home</a>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Personal</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Discography</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<main class="projects-section">
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-image">
-        <img src="https://source.unsplash.com/300x200/?technology,code" alt="Project Thumbnail">
-      </div>
-      <div class="project-info">
-        <a href="https://github.com/" target="_blank" class="github-logo">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
-        </a>
-        <a href="https://project-link.com" target="_blank" class="project-button">Go to Project</a>
-      </div>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <ul>
+            <li><a href="/HTML/main.html">Go to Home</a></li>
+            <li class="right"><a href="discography.html"><strong>Discography</strong></a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <div class="projects-container">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="project-thumbnail.png" alt="Project Thumbnail" class="project-image">
+            <h2>Renewable Energy Demand Forecasting</h2>
+            <p>Identifies the most reliable model for energy demand forecasting and analyzes the impact of different features on model performance.</p>
+            <div class="tags">
+                <span>#python</span>
+                <span>#ml</span>
+                <span>#randomforest</span>
+            </div>
+            <a href="https://github.com/yourrepo/renewable-energy" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="project-thumbnail.png" alt="Project Thumbnail" class="project-image">
+            <h2>Movie Recommender System</h2>
+            <p>Harnessed the power of the TMDB 5000 dataset to offer movie recommendations and provide detailed movie information.</p>
+            <div class="tags">
+                <span>#python</span>
+                <span>#flask</span>
+                <span>#nltk</span>
+            </div>
+            <a href="https://github.com/yourrepo/movie-recommender" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
     </div>
-  </div>
-</main>
+
 </body>
 </html>
