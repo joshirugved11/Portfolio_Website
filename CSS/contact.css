@@ -1,135 +1,139 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: black;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #00c3ff;
+}
+
+/* Contact Form */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label, form input, form textarea, form button {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+/* ✅ Updated input fields: White background and black text */
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;  /* Changed to white */
+  color: black;  /* Changed to black for better readability */
+  font-size: 16px;
+}
+
+/* Placeholder Text */
+input::placeholder, textarea::placeholder {
+  color: #777;
+}
+
+/* Form Button */
+button {
+  background-color: #00c3ff;
+  color: black;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #009bd3;
+  color: white;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-icons .spotify { background-color: #1db954; }
+.social-icons .linkedin { background-color: #0077b5; }
+.social-icons .instagram { background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-icons .twitter { background-color: #1da1f2; }
+.social-icons .youtube { background-color: #ff0000; }
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 15px;
   }
-  
-  html,
-  body {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background-color: rgb(167, 243, 208);
-    color: #333
+
+  form input, form textarea {
+    font-size: 14px;
   }
-  
-  header {
-    background-color: #3b82f6;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  
-  .contact-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .contact-form label {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .contact-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  
+
   .social-icons a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 10px;
-    transition: all 0.3s ease;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
-  
-  .social-icons a i {
-    pointer-events: none;
-  }
-  
-  .social-icons .spotify {
-    background-color: #1db954;
-  }
-  
-  .social-icons .linkedin {
-    background-color: #0077b5;
-  }
-  
-  .social-icons .instagram {
-    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  }
-  
-  .social-icons .twitter {
-    background-color: #1da1f2;
-  }
-  
-  .social-icons .youtube {
-    background-color: #ff0000;
-  }
-  
-  .social-icons .custom-link {
-    background-color: #8e44ad;
-  }
-  
-  .social-icons a:hover {
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 600px) {
-    .contact-container {
-      padding: 10px;
-    }
-  
-    .social-icons a {
-      margin: 5px;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-    }
-  }
-  
+}

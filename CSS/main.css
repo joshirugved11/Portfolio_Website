@@ -1,51 +1,164 @@
 @import "tailwindcss/base";
 
-/* Custom styles to enhance the Tailwind default look */
-body {
-    font-family: 'Inter', sans-serif;
+/* Dark Theme */
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header Styling */
-header {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 20px;
+    color: white;
 }
 
-header nav a {
-    display: inline-block;
-    padding: 10px 15px;
+nav a {
+    color: white;
+    margin: 0 20px;
     text-decoration: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    border: 1px solid transparent;
-    border-radius: 8px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-header nav a:hover {
-    background-color: #64d4c5; /* Light background color for hover */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #1a202c;
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* About Section */
-#about {
-    padding: 60px 20px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
 }
 
-#about h2 {
-    color: #1a202c;
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: gray;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+/* Content Section */
+.container {
+    max-width: 90%;
+    width: 800px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
 }
 
 /* Skills Section */
-#skills div {
-    transition: transform 0.3s;
+#skills {
+    text-align: center;
+    padding: 50px;
+}
+
+#skills h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-box {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 /* Footer */
 footer {
-    background-color: #1a202c;
-    color: white;
-    font-size: 0.9rem;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
+/* Responsive Design */
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: black;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    #skills {
+        padding: 20px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
 }
