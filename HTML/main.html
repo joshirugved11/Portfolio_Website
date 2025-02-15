@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rugved's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/CSS/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-50">
-  <!-- Header -->
-  <header class="bg-blue-500 text-white p-4">
-    <nav class="container mx-auto flex flex-wrap justify-between items-center">
-      <h1 class="text-xl">Rugved's Portfolio</h1>
-      <ul class="flex space-x-4 text-sm">
-        <li><a href="#" class="hover">Home</a></li>
-        <li><a href="/HTML/projects.html" class="hover">Projects</a></li>
-        <li><a href="/HTML/contact.html" class="hover">Contact</a></li>
-        <li><a href="/HTML/blogs.html" class="hover">Blogs</a></li>
-      </ul>
+
+<body class="dark-theme">
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="/HTML/blogs.html">Blogs</a></li>
+            <li><a href="#">Verses</a></li>
+            <li><a href="/HTML/contact.html">Contact</a></li>
+            <li><a href="/HTML/projects.html">Projects</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-10 bg-green-200">
-    <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
-      <!-- Photo -->
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <img src="/Images/IMG-20241116-WA0160.jpg" alt="Rugved Joshi" class="w-96 h-auto mx-auto md:mx-0 shadow-lg">
-      </div>
-  
-      <!-- Text -->
-      <div class="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
-        <h2 class="text-3xl font-bold">About Me</h2>
-        <p class="mt-2">
-          Hello! I'm Rugved Joshi, I describe myself as ambitious to learn and understand new things. AI and Data Science enthusiast. 
-          Currently pursuing a degree in AI and Data Science at PVG COET, Pune. I am also eager to contribute and learn Music Production and Sound Engineering.
-        </p>
-      </div>
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>AI and Data Science enthusiast, Music Producer, and Software Developer.</p>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-10 bg-green-100 text-center">
-    <h2 class="text-2xl font-semibold">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 px-5">
-      <div class="bg-white p-4 shadow-md rounded-md">Programming: Python, C++, HTML, CSS, JavaScript</div>
-      <div class="bg-white p-4 shadow-md rounded-md">AI/ML, Data Science, Cloud Systems</div>
-      <div class="bg-white p-4 shadow-md rounded-md">Music Production and Sound Engineering</div>
-    </div>
-  </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Programming</h3>
+                <p>Python, C++, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="skill-box">
+                <h3>Machine Learning & Data Science</h3>
+                <p>PyTorch, Scikit-Learn, Pandas</p>
+            </div>
+            <div class="skill-box">
+                <h3>Cloud Systems</h3>
+                <p>AWS, GCP</p>
+            </div>
+            <div class="skill-box">
+                <h3>Music Production & Sound Engineering</h3>
+                <p>Ableton Live, Pro Tools</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-4">
-    <p>&copy; 2025 Rugved Joshi. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; Rugved Joshi - All Rights Reserved</p>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
+
 </html>
