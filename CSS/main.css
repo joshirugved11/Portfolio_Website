@@ -98,9 +98,8 @@ nav a:hover {
 
 /* Contact Form */
 .container {
-    max-width: 500px;
     margin: 50px auto;
-    padding: 20px;
+    padding: auto;
     background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
