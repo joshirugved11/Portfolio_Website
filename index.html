@@ -1,21 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <p>Website is under maintainence</p>
+
+<body class="dark-theme">
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Travel Diaries</a></li>
+            <li><a href="/HTML/projects.html">Projects</a></li>
+            <li><a href="/HTML/blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>AI and Data Science enthusiast, Music Producer, and Software Developer.</p>
+    </div>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Programming</h3>
+                <p>Python, C++, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="skill-box">
+                <h3>Machine Learning & Data Science</h3>
+                <p>PyTorch, Scikit-Learn, Pandas</p>
+            </div>
+            <div class="skill-box">
+                <h3>Cloud Systems</h3>
+                <p>AWS, GCP</p>
+            </div>
+            <div class="skill-box">
+                <h3>Music Production & Sound Engineering</h3>
+                <p>Ableton Live, Pro Tools</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Sounds Section -->
+    <section id="ai-sounds" class="container">
+        <h2>🎵 Listen to AI Sounds</h2>
+        <div class="sound-box">
+            <label for="soundSelect">Choose Your Sound:</label>
+            <select id="soundSelect" class="dropdown">
+                <option value="ai_music.mp3">AI Music</option>
+                <option value="robotic_voice.mp3">Robotic Voice</option>
+                <option value="nature_ai.mp3">AI Nature Sounds</option>
+            </select>
+            <button id="playButton" class="play-btn">▶ Play</button>
+            <audio id="audioPlayer"></audio>
+        </div>
+    </section>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/rugved-joshi-954a9b22a" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/r_u.g_v.e_d?igsh=MWZ1NzBsdXVoMjliMg==" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@rugvedsjoshi?si=AmUmQT2VEG6dbCte" target="_blank" class="icon youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com" target="_blank" class="icon spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://github.com/joshirugved11" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; Rugved Joshi - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        document.getElementById("playButton").addEventListener("click", function () {
+            const selectedSound = document.getElementById("soundSelect").value;
+            const audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.src = selectedSound;
+            audioPlayer.play();
+        });
+    </script>
 </body>
-<style>
-    p {
-        font-family: Arial, sans-serif;
-        font-size: 20px;
-        color: #333;
-        text-align: center;
-        margin-top: 20%;
-        text-align: center;
-    }
-</style>
 </html>
